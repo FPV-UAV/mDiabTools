@@ -14,12 +14,14 @@ namespace mDiabTools
 
         public static void Adapter_DeviceDiscovered(object sender, Plugin.BLE.Abstractions.EventArgs.DeviceEventArgs e)
         {
+            bleDeviceNo++;
+            Debug.WriteLine($"The bluetooth device discovered No: {bleDeviceNo}");
             Debug.WriteLine($"The bluetooth device discovered ID {e.Device.Id}");
             Debug.WriteLine($"The bluetooth device discovered Name {e.Device.Name}");
             Debug.WriteLine($"The bluetooth device discovered NativeDevice {e.Device.NativeDevice}");
             Debug.WriteLine($"The bluetooth device discovered RSSI {e.Device.Rssi}");
             Debug.WriteLine($"The bluetooth device discovered State {e.Device.State}");
-            Debug.WriteLine($"The bluetooth device discovered AdvertisementRecords {e.Device.AdvertisementRecords}");
+            Debug.WriteLine($"The bluetooth device discovered AdvertisementRecords {e.Device.AdvertisementRecords.ToString()}");
         }
 
         public static void Adapter_ScanTimeoutElapsed(object sender, EventArgs e)

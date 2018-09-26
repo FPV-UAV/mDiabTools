@@ -11,7 +11,7 @@ namespace mDiabTools.Views
         public MainPage()
         {
             InitializeComponent();
-            App.bleInit();
+            
         }
     }
 }

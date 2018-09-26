@@ -10,7 +10,9 @@ namespace mDiabTools.Views
     {
         public AboutPage()
         {
+            
             InitializeComponent();
+
         }
     }
 }
